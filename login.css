@@ -1,0 +1,125 @@
+body{
+  background-image: url('images/microsoftbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 8%;
+  margin-top: 10%;
+}
+#div1{
+  margin-left: 450px;
+  margin-top: 80px;
+  width: 460px;
+  background-color: #ffffff;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+#img1{
+  width: 120px;
+}
+#p1{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: -10px;
+}
+#textbox{
+  border: 1px solid #ffffff;
+  font-size: 18px;
+}
+hr{
+  width: 400px;
+  margin-right: 100px;
+  margin-bottom: 17px;
+}
+#label1{
+  color: #1b1b1b;
+  font-size: 17px;
+}
+#a1{
+  color: #108df3;
+  text-decoration: none;
+  font-size: 17px;
+}
+#a1:hover{
+  text-decoration: underline;
+  color: #666666;
+
+}
+#a2{
+  font-size: 17px;
+  text-decoration: none;
+  color: #108df3;
+  float: left;
+  margin-right: 0px;
+}
+#a2:hover{
+  text-decoration: underline;
+  color: #666666;
+}
+#a3{
+  float: left;
+  margin-left: -10px;
+}
+#img2{
+  width: 43px;
+  
+}
+#submit{
+  width: 120px;
+  background-color: #005da6;
+  color: white;
+  font-size: 18px;
+  padding: 7px;
+  border: 1px solid #005da6;
+  margin-left: 296px;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+#submit:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+#div2{
+  margin-left: 450px;
+  height: 60px;
+  margin-top: 22px;
+}
+#img3{
+  width: 55px;
+  float: left;
+  margin-left: 50px;
+}
+#label2{
+  font-size: 19px;
+  float: left;
+  margin-top: 19px;
+}
+#button1{
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  width: 510px;
+}
+#button1:hover{
+  cursor: pointer;
+  background-color: #e5e5e5;
+  border: 1px solid #e5e5e5;
+}
+#div3{
+  margin-top: 300px;
+  margin-left: 79%;
+}
+#a4{
+  color: black;
+  text-decoration: none;
+}
+#a4:hover{
+  text-decoration: underline;
+}
+#a5{
+  color: black;
+  margin-left: 20px;
+  text-decoration: none;
+}
+#a5:hover{
+  text-decoration: underline;
+}
