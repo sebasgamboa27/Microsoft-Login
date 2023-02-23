@@ -1,0 +1,72 @@
+<div id="div1">
+  <img id="img1" src="assets/microsoftlogo.png" alt="">
+  <span *ngIf="!register">
+    <p id="p1">Sign In</p>
+  </span>
+  <span *ngIf="register">
+    <p id="p1">Register</p>
+  </span>
+  <span *ngIf="!showPassword && !resetPassword">
+    <input id="textbox" type="text" [(ngModel)]="email" name="email" placeholder="Email, phone, or Skype" required>
+  </span>
+  <span *ngIf="showPassword">
+    <input id="textbox" type="password" [(ngModel)]="password" name="password" placeholder="Password" required>
+  </span>
+  <span *ngIf="resetPassword">
+    <input id="textbox" type="password" [(ngModel)]="password" name="password" placeholder="New Password" required>
+  </span>
+  <hr>
+  <span *ngIf="!register">
+    <label id="label1" for="">No account? </label>
+    <a id="a1" (click)="createUser()">Create one!</a><br><br>
+  </span>
+  <span *ngIf="register">
+    <label id="label1" for="">Already have an account? </label>
+    <a id="a1" (click)="createUser()">Sign In</a><br><br>
+  </span>
+  <a id="a2" (click)="resetPasswordMethod()">Reset Password</a>
+  <a id="a3" href="#"><img id="img2" src="assets/q4.png" alt=""></a><br><br>
+  <span *ngIf="!showPassword && !twofactor && !resetPassword && !register">
+    <input id="submit" type="submit" name="submit" value="Next" (click)="nextPressed()">
+  </span>
+  <span *ngIf="showPassword && !twofactor && !register">
+    <input id="submit" type="submit" name="submit" value="Login" (click)="nextPressed()">
+  </span>
+
+  <span *ngIf="twofactor">
+    <input id="submit" type="submit" name="submit" value="Send Code" (click)="sendCode()">
+  </span>
+  
+  <span *ngIf="twofactor && twofactorReady">
+    <input id="submit" type="submit" name="submit" value="Send Code" (click)="sendCode()">
+  </span>
+  <span *ngIf="resetPassword">
+    <input id="submit" type="submit" name="submit" value="Change" (click)="changePassword()">
+  </span>
+  <span *ngIf="!showPassword && register">
+    <input id="submit" type="submit" name="submit" value="Next" (click)="nextRegister()">
+  </span>
+  <span *ngIf="showPassword && register">
+    <input id="submit" type="submit" name="submit" value="Register" (click)="nextRegister()">
+  </span>
+</div>
+
+
+<div id="div2">
+  <button id="button1" (click)="twofactorenter()">
+    <img id="img3" src="assets/key.png" alt="">
+    <label id="label2" for="">Sign-in options</label>
+  </button>
+</div>
+
+<span *ngIf="twofactor">
+  <div class="code-input">
+    <input type="text" maxlength="6" pattern="[0-9]*" inputmode="numeric" placeholder="Enter 6-digit code sent to email" required>
+  </div>
+</span>
+
+<div id="div3">
+  <a id="a4" href="#">Terms of use</a>
+  <a id="a5" href="#">Privacy & cookies</a>
+
+</div>
