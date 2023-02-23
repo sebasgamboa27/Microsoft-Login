@@ -61,7 +61,7 @@
 
 <span *ngIf="twofactor">
   <div class="code-input">
-    <input type="text" maxlength="6" pattern="[0-9]*" inputmode="numeric" placeholder="Enter 6-digit code sent to email" required>
+    <input [(ngModel)]="digit" name="digit" type="text" maxlength="6" pattern="[0-9]*" inputmode="numeric" placeholder="Enter 6-digit code sent to email" (keyup.enter)="onEnter()" required>
   </div>
 </span>
 

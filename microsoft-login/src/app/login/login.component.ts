@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
 
   @Input() email : string | undefined;
   @Input() password : string | undefined;
+  @Input() digit : string | undefined;
   showPassword: boolean = false;
 
   twofactor: boolean = false;
@@ -92,6 +93,21 @@ export class LoginComponent implements OnInit {
       this.user.user.password = this.password;
       alert('User created succesfully');
       this.router.navigate(['home']);
+    }
+  }
+
+  onEnter(){
+    if(this.email != undefined && this.digit != undefined){
+      if (this.digit.length > 5){
+        alert('Logged in succesfully');
+        this.router.navigate(['home']);
+      }
+      else{
+        alert('6-Digit Code incorrect');
+      }
+    }
+    else{
+      alert('Email or digit code not valid');
     }
   }
 
